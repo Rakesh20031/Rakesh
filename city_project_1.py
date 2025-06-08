@@ -12,7 +12,7 @@ def chat_with_llm_model1(user_input):
     
     response = requests.post(
         "https://llmfoundry.straive.com/azure/openai/deployments/gpt-35-turbo/chat/completions?api-version=2024-05-01-preview",
-        headers={"Authorization": f"Bearer {LLMFOUNDRY_TOKEN}:Muthu_bot"},
+        headers={"Authorization": f"Bearer {LLMFOUNDRY_TOKEN}:rakesh_bot"},
         json={"messages": [{"role": "user", "content": user_input}]},
     )
     
@@ -126,5 +126,5 @@ print(f"Rows where model comparison was not needed: {no_check_needed_count}")
 
 # Save the modified DataFrame back to Excel
 print("Saving the results to Excel.")
-df.to_excel(r'D:\python_test\test\city_name\processed_city_name.xlsx', sheet_name=sheet_name, index=False)
+df.to_excel(r"C:\Users\rakes\Desktop\city project\processed_city_name.xlsx", sheet_name=sheet_name, index=False)
 print("Processing completed and file saved.")
